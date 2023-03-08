@@ -12,7 +12,6 @@ route.get("/userActivity", async (req, res) => {
       .exec();
 
     const counts = await userActivityModel.count();
-    console.log(userActivityList);
     res.json({
       statusCode: 200,
       data: userActivityList,
