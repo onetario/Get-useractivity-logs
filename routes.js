@@ -2,8 +2,8 @@ const express = require("express");
 const route = express.Router();
 const { userActivityModel } = require("./mongooseConnection");
 
-route.get("/getUserActivityLogs", async (req, res) => {
-  const { page = 1, limit = 10 } = req.query;
+route.get("/userActivity", async (req, res) => {
+  const { page = 1, limit } = req.query;
   try {
     const userActivityList = await userActivityModel
       .find()
